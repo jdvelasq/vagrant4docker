@@ -17,8 +17,10 @@ Paso 1
   Descargue e instale `VirtualBox  <https://www.virtualbox.org/wiki/Downloads>`_.
 
 Paso 2
-  Descargue e instale `Vagrant <https://www.vagrantup.com/downloads.html>`_.
-  Pasos exclusivos para Microsoft Windows:
+  Descargue e instale `Vagrant <https://www.vagrantup.com/downloads.html>`_. de la forma habitual. 
+  
+  
+  **Pasos exclusivos para Microsoft Windows**:
 
   Paso 2.1
      Abra la busqueda de Windows, escriba la palabra **variables** y escoja
@@ -53,27 +55,11 @@ Paso 3
     :alt: Alternative text
 
 Paso 4
-  Habra el Terminal y vaya a la carpeta que contiene la copia de este repositorio.
+  Habra el Terminal y vaya a la carpeta que contiene la copia de este repositorio. 
 
 Paso 5
-  Prepare el archivo `Vagrantfile`. Si esta viendo las asignaturas Ciencia de los Datos 
-  o Analítica Predictiva, comente el siguiente fragmento de código en el archivo 
-  Vagrantfile, líneas 68 a 71.
-
-  .. code::
-
-     config.vm.provision "puppet" do |puppet|
-       puppet.manifests_path = 'manifests'
-       puppet.manifest_file = 'hadoop-aws.pp'
-     end
-  
-  Si está cursando la asignatura Analítica de Grandes Datos, verifique que el
-  fragmento de código anterior no este comentado.
-
-
-Paso 6
-  Proceda con el encendido de la máquina de acuerdo a su sistema operativo.
-
+  Proceda con el encendido de la máquina de acuerdo a su sistema operativo. Las 
+  instrucciones detalladas aparecen más adelante en este mismo documento. 
 
 Solución de problemas
 ===============================================================
@@ -214,23 +200,104 @@ Borrado de la VM
     vagrant destroy
 
 
-Software instalado y configuración
-========================================
+Software instalado y configuración (docker)
+=====================================================
+
+Esta instalación de Vagrant usa extensivamente docker para la instalación y uso del software.
+A continuación se detalla como ejecutar cada uno de los programas.
+
+Encendido de la máquina virtual
+  Abra el Terminal y vaya hasta la carpeta donde clono este repositorio. Ejecute
+
+  .. code-block:: bash
+
+    vagrant up 
 
 
-Jupyter notebook 
+Apertura de una sesión
+  Después de encender la VM,  conéctese a ella con
+
+  .. code-block:: bash
+
+    vagrant ssh
+
+Acceso a la carpeta compartida
+  Para ir a la carpeta compartida entre la VM y su sistema
+  operativo, ejecute
+
+  .. code-block:: bash
+
+    cd /vagrant
+  
+  En esta carpeta ejecuta la instrucción correspondiente para iniciar alguna de las 
+  aplicaciones listadas a continnuación.
+  
+  
+Ejecución de una aplicación
+  Ejecute el comando indicado para ejecutar la aplicación correspondiente.
+  
+  
+  **Python 3**
+  
   .. code-block::
   
-    jupyter notebook -ip=0.0.0.0
-    
-  Abra el navegador en http://127.0.0.1:8888/......  
+      vagrant@ubuntu-bionic:~$ bash python3.sh
+      
+      
+  El sistema abrirá un nuevo terminal con Bash desde el cual puede ejecutar Python 3.
   
-Jupyter lab
+  
+  **Jupyter Lab**
+  
   .. code-block::
   
-    jupyter lab -ip=0.0.0.0
- 
-  Abra el navegador en http://127.0.0.1:8888/......
+      vagrant@ubuntu-bionic:~$ docker-compose --file jupyterlab.yml  up
+      
+  **Apache Pig**
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:~$ docker-compose --file pig.yml  up
+
+  **Apache Mahout**
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:~$ docker-compose --file mahout.yml  up
+
+  **Apache Hive**
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:~$ docker-compose --file hive.yml  up
+  
+  
+  **Apache Spark**
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:~$ docker-compose --file pyspark.yml  up
+  
+  
+  **Open Refine**
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:~$ docker-compose --file openrefine.yml  up
+  
+  Abra su navegador en http://127.0.0.1:3333/
+
+  **Apache Superset**
+  
+  Software para visualización e inteligencia de negocios. 
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:~$ docker-compose --file superset.yml  up
+
+  Abra su navegador en http://127.0.0.1:3088/
+  
+  
 
 MySQL
   MySQL 5.7. Para tener acceso al shell interactivo digite:
@@ -239,22 +306,16 @@ MySQL
      
     sudo mysql
 
-OpenRefine
-  http::wwww.openrefine.org y https://github.com/OpenRefine/OpenRefine
-  
-  .. code-block::
-    
-     refine -i 0.0.0.0  
      
   Abra su navegador en http://127.0.0.1:3333/
      
 Superset (Apache)
-  Software para visualización e inteligencia de negocios. 
+  
   
   .. code-block::
   superset -i 3088
   
-  Abra su navegador en http://127.0.0.1:3088/
+  
 
 
 
