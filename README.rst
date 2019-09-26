@@ -251,39 +251,39 @@ Ejecución de una aplicación
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file jupyterlab.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file jupyterlab.yml  up
       
   **Apache Pig**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file pig.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file pig.yml  up
 
   **Apache Mahout**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file mahout.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file mahout.yml  up
 
   **Apache Hive**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file hive.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file hive.yml  up
   
   
   **Apache Spark**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file pyspark.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file pyspark.yml  up
   
   
   **Open Refine**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file openrefine.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file openrefine.yml  up
   
   Abra su navegador en http://127.0.0.1:3333/
 
@@ -293,7 +293,7 @@ Ejecución de una aplicación
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file superset.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file superset.yml  up
 
   Abra su navegador en http://127.0.0.1:3088/
   
@@ -309,11 +309,6 @@ MySQL
      
   Abra su navegador en http://127.0.0.1:3333/
      
-Superset (Apache)
-  
-  
-  .. code-block::
-  superset -i 3088
   
   
 
@@ -340,6 +335,27 @@ Resumen
   ## Cerrar la sesión en la VM
   exit
 
+
+  ## Programas
+  bash python3.sh
+  
+  sudo docker-compose --file jupyterlab.yml up
+  
+  sudo docker-compose --file pig.yml up
+  
+  sudo docker-compose --file mahout.yml up
+  
+  sudo docker-compose --file hive.yml up
+  
+  sudo docker-compose --file superset.yml up
+  
+  sudo docker-compose --file pyspark.yml up
+  
+  sudo docker-compose --file openrefine.yml up
+  
+  sudo docker-compose --file superset.yml up
+  
+  
 
 Material complementario
 ========================================
