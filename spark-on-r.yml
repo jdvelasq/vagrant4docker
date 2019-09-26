@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  aws:
+  courses:
     image: jdvelasq/spark-on-r:2019-2
     ports:
       - "50070:50070"

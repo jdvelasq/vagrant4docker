@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  aws:
+  courses:
     image: jdvelasq/jupyterlab:2019-2
     ports:
       - "50070:50070"

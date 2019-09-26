@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  aws:
+  courses:
     image: jdvelasq/python:3.6-stretch
     ports:
       - "8888:8888"
