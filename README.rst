@@ -255,7 +255,7 @@ Ejecución de una aplicación
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ bash python3.sh
+      vagrant@ubuntu-bionic:/vagrant$ bash python3.sh
       
       
   El sistema abrirá un nuevo terminal con Bash desde el cual puede ejecutar Python 3.
@@ -265,32 +265,32 @@ Ejecución de una aplicación
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ sudo docker-compose --file jupyterlab.yml  up
+      vagrant@ubuntu-bionic:/vagrant$ sudo docker-compose --file jupyterlab.yml  up
       
   **Apache Pig**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ sudo docker-compose --file pig.yml  up
+      vagrant@ubuntu-bionic:/vagrant$ sudo docker-compose --file pig.yml  up
 
   **Apache Mahout**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ sudo docker-compose --file mahout.yml  up
+      vagrant@ubuntu-bionic:/vagrant$ sudo docker-compose --file mahout.yml  up
 
   **Apache Hive**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ sudo docker-compose --file hive.yml  up
+      vagrant@ubuntu-bionic:/vagrant$ sudo docker-compose --file hive.yml  up
   
   
   **Apache Spark**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ sudo docker-compose --file pyspark.yml  up
+      vagrant@ubuntu-bionic:/vagrant$ sudo docker-compose --file pyspark.yml  up
   
   
   **Open Refine**
@@ -307,7 +307,7 @@ Ejecución de una aplicación
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ sudo docker-compose --file superset.yml  up
+      vagrant@ubuntu-bionic:/vagrant$ sudo docker-compose --file superset.yml  up
 
   Abra su navegador en http://127.0.0.1:3088/
   
