@@ -1,5 +1,5 @@
 Creación de la máquina virtual usando Vagrant
-=============================================================
+=================================================================================================
 
 En esta práctica se realizará la configuración de un ambiente de
 programación portable que garantice una ejecución idéntica en todos los
@@ -62,7 +62,7 @@ Paso 5
   instrucciones detalladas aparecen más adelante en este mismo documento. 
 
 Solución de problemas
-===============================================================
+=================================================================================================
 
 **1. Mi computador reporta que el Bios no permite activar la multitarea.**
 
@@ -88,7 +88,7 @@ Realice el siguiente procedimiento:
 
 
 Encendido, apagado y borrado de la máquina virtual
-===================================================================================================
+=================================================================================================
 
 En esta sección se describe el uso de la máquina virtual. Los comandos 
 presentados a continuación se ejecutan en la interfaz de línea
@@ -200,8 +200,14 @@ Borrado de la VM
     vagrant destroy
 
 
+Creación de una cuenta en Docker Hub (https://hub.docker.com)
+=================================================================================================
+
+Cree una cuenta de usuario en Docker Hub (https://hub.docker.com)
+
+
 Software instalado y configuración (docker)
-=====================================================
+=================================================================================================
 
 Esta instalación de Vagrant usa extensivamente docker para la instalación y uso del software.
 A continuación se detalla como ejecutar cada uno de los programas.
@@ -233,6 +239,14 @@ Acceso a la carpeta compartida
   aplicaciones listadas a continnuación.
   
   
+Login en Docker Hub
+  Acceda a Docker Hub desde la consola con el siguiente comando:
+  
+  .. code-block:: bash
+
+    docker login
+  
+  
 Ejecución de una aplicación
   Ejecute el comando indicado para ejecutar la aplicación correspondiente.
   
@@ -251,39 +265,39 @@ Ejecución de una aplicación
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file jupyterlab.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file jupyterlab.yml  up
       
   **Apache Pig**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file pig.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file pig.yml  up
 
   **Apache Mahout**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file mahout.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file mahout.yml  up
 
   **Apache Hive**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file hive.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file hive.yml  up
   
   
   **Apache Spark**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file pyspark.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file pyspark.yml  up
   
   
   **Open Refine**
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file openrefine.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file openrefine.yml  up
   
   Abra su navegador en http://127.0.0.1:3333/
 
@@ -293,7 +307,7 @@ Ejecución de una aplicación
   
   .. code-block::
   
-      vagrant@ubuntu-bionic:~$ docker-compose --file superset.yml  up
+      vagrant@ubuntu-bionic:~$ sudo docker-compose --file superset.yml  up
 
   Abra su navegador en http://127.0.0.1:3088/
   
@@ -309,11 +323,6 @@ MySQL
      
   Abra su navegador en http://127.0.0.1:3333/
      
-Superset (Apache)
-  
-  
-  .. code-block::
-  superset -i 3088
   
   
 
@@ -321,7 +330,7 @@ Superset (Apache)
 
 
 Resumen
-========================================
+=================================================================================================
 
 .. code-block:: bash
 
@@ -340,6 +349,27 @@ Resumen
   ## Cerrar la sesión en la VM
   exit
 
+
+  ## Programas
+  bash python3.sh
+  
+  sudo docker-compose --file jupyterlab.yml up
+  
+  sudo docker-compose --file pig.yml up
+  
+  sudo docker-compose --file mahout.yml up
+  
+  sudo docker-compose --file hive.yml up
+  
+  sudo docker-compose --file superset.yml up
+  
+  sudo docker-compose --file pyspark.yml up
+  
+  sudo docker-compose --file openrefine.yml up
+  
+  sudo docker-compose --file superset.yml up
+  
+  
 
 Material complementario
 ========================================
