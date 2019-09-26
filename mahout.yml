@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.7'
 services:
   aws:
     image: jdvelasq/mahout:2019-2
@@ -6,6 +6,6 @@ services:
       - "8888:8888"
     volumes:
       - type: bind
-        source: "$PWD"
+        source: "/vagrant"
         target: /app
 
