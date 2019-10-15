@@ -1,1 +1,0 @@
-get_ipython().system('echo hola mundo cruel')
