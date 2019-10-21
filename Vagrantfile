@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
   ##
   config.vm.provision "shell", inline: <<-SHELL
     apt update && \
-    apt install -y puppet && 
+    apt install -y puppet && \
     rm -rf /var/lib/apt/lists/*
   SHELL
   
