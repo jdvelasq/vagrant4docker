@@ -1,10 +1,5 @@
 Vagrant.configure("2") do |config|
   
-  ##
-  ##
-  ##  Puppet
-  ##
-  ##
   config.vm.box = "ubuntu/bionic64"
 
   ##
@@ -21,6 +16,18 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
     v.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]    
   end
+  
+  ##
+  ##
+  ##  Puppet
+  ##
+  ##
+  config.vm.provision "shell", inline: <<-SHELL
+    apt update && \
+    apt install -y puppet && 
+    rm -rf /var/lib/apt/lists/*
+  SHELL
+  
 
   config.vm.provision "shell", inline: <<-SHELL
 
