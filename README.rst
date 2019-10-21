@@ -46,7 +46,15 @@ Paso 2
      Si no se encuentra incluida, haga click en **Nuevo** y agréguela.
 
 Paso 3
-  Haga una copia de este repositorio en su disco duro. En la página
+  Instale el plugin para modificar el tamaño en disco de la máquina virtua. En
+  el Terminal (o símbolo del sistema) ejecute
+  
+  .. code-block:: bash
+  
+     vagrant plugin install vagrant-disksize
+
+Paso 4
+  Clone este repositorio en su disco duro. En la página
   principal del repositorio encontrará el botón **Clone or download**.
   Renombre la carpeta. Esta será su carpeta de trabajo.
 
@@ -54,10 +62,10 @@ Paso 3
     :width: 400
     :alt: Alternative text
 
-Paso 4
+Paso 5
   Habra el Terminal y vaya a la carpeta que contiene la copia de este repositorio. 
 
-Paso 5
+Paso 6
   Proceda con el encendido de la máquina de acuerdo a su sistema operativo. Las 
   instrucciones detalladas aparecen más adelante en este mismo documento. 
 
