@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
     v.cpus = 4
     v.gui = true
     v.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
-    v.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]    
+    # v.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]    
   end
   
   ##
