@@ -27,11 +27,6 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -yq \
       build-essential \
       tree \
-      apt-transport-https \
-      ca-certificates \
-      curl \
-      gnupg-agent \
-      software-properties-common
   SHELL
   
   ##
@@ -48,10 +43,21 @@ Vagrant.configure("2") do |config|
   ##
   ##
   ##  Docker
-  ##
-  ##
+  ##  Source: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+  ##  
   config.vm.provision "shell", inline: <<-SHELL
 
+    # SET UP THE REPOSITORY
+    
+    sudo apt-get update
+    
+    sudo apt-get install -yq \
+      apt-transport-https \
+      ca-certificates \
+      curl \
+      gnupg-agent \
+      software-properties-common
+    
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     
     sudo add-apt-repository \
@@ -59,22 +65,37 @@ Vagrant.configure("2") do |config|
       $(lsb_release -cs) \
       stable"
 
-    sudo apt-get update
+    # INSTALL DOCKER ENGINE - COMMUNITY
 
-    sudo apt-get install -yq \
-      docker-ce=5:19.03.1~3-0~ubuntu-bionic \
-      docker-ce-cli=5:19.03.1~3-0~ubuntu-bionic \
-      containerd.io
+    sudo apt-get update 
+
+    sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+    # sudo apt-get install -yq \
+    #  docker-ce=5:19.03.1~3-0~ubuntu-bionic \
+    #  docker-ce-cli=5:19.03.1~3-0~ubuntu-bionic \
+    #  containerd.io
+
+    rm -rf /var/lib/apt/lists/*
+
+  SHELL
+
+  ##
+  ##
+  ##  Docker Compose
+  ##  Source: https://docs.docker.com/compose/install/
+  ##  
+  config.vm.provision "shell", inline: <<-SHELL
 
     sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" \
       -o /usr/local/bin/docker-compose
 
     sudo chmod +x /usr/local/bin/docker-compose
 
+    # Command line completion
+    # Source: https://docs.docker.com/compose/completion/
     sudo curl -L https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/completion/bash/docker-compose \
       -o /etc/bash_completion.d/docker-compose
-
-    rm -rf /var/lib/apt/lists/*
 
   SHELL
 
