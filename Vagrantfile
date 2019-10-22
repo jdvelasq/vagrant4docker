@@ -11,10 +11,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 12248
-    v.cpus = 4
-    # v.gui = true
-    # v.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
-    # v.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]    
+    v.cpus = 4    
   end
   
   ##
@@ -26,8 +23,8 @@ Vagrant.configure("2") do |config|
     sudo apt-get update && \
     sudo apt-get install -yq \
       build-essential \
-      tree \
-  SHELL
+      tree
+SHELL
   
   ##
   ##
@@ -38,7 +35,8 @@ Vagrant.configure("2") do |config|
     apt update && \
     apt install -y puppet && \
     rm -rf /var/lib/apt/lists/*
-  SHELL
+
+SHELL
 
   ##
   ##
@@ -77,8 +75,7 @@ Vagrant.configure("2") do |config|
     #  containerd.io
 
     rm -rf /var/lib/apt/lists/*
-
-  SHELL
+SHELL
 
   ##
   ##
@@ -97,7 +94,7 @@ Vagrant.configure("2") do |config|
     sudo curl -L https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/completion/bash/docker-compose \
       -o /etc/bash_completion.d/docker-compose
 
-  SHELL
+SHELL
 
   ##
   ##
