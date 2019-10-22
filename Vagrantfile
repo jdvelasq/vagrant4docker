@@ -19,20 +19,11 @@ Vagrant.configure("2") do |config|
   
   ##
   ##
-  ##  Puppet
+  ##  Configuración básica y herramientas de programación
   ##
   ##
   config.vm.provision "shell", inline: <<-SHELL
-    apt update && \
-    apt install -y puppet && \
-    rm -rf /var/lib/apt/lists/*
-  SHELL
-  
-
-  config.vm.provision "shell", inline: <<-SHELL
-
-    sudo apt-get update 
-
+    sudo apt-get update && \
     sudo apt-get install -yq \
       build-essential \
       tree \
@@ -41,6 +32,25 @@ Vagrant.configure("2") do |config|
       curl \
       gnupg-agent \
       software-properties-common
+  SHELL
+  
+  ##
+  ##
+  ##  Puppet
+  ##
+  ##
+  config.vm.provision "shell", inline: <<-SHELL
+    apt update && \
+    apt install -y puppet && \
+    rm -rf /var/lib/apt/lists/*
+  SHELL
+
+  ##
+  ##
+  ##  Docker
+  ##
+  ##
+  config.vm.provision "shell", inline: <<-SHELL
 
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     
@@ -67,6 +77,12 @@ Vagrant.configure("2") do |config|
     rm -rf /var/lib/apt/lists/*
 
   SHELL
+
+  ##
+  ##
+  ##  Configuración de puertos para las distintas herramientas
+  ##  y lenguajes
+  ##
 
   ## Open Refine
   config.vm.network :forwarded_port, guest: 3333, host: 3333, host_ip: "127.0.0.1"
