@@ -1,4 +1,4 @@
-Creación de la máquina virtual usando Vagrant
+Parte 1: Creación de la máquina virtual usando Vagrant
 =================================================================================================
 
 En esta práctica se realizará la configuración de un ambiente de
@@ -95,7 +95,7 @@ Realice el siguiente procedimiento:
 
 
 
-Encendido, apagado y borrado de la máquina virtual
+Parte 3: Encendido, apagado y borrado de la máquina virtual
 =================================================================================================
 
 En esta sección se describe el uso de la máquina virtual. Los comandos 
@@ -208,13 +208,13 @@ Borrado de la VM
     vagrant destroy
 
 
-Creación de una cuenta en Docker Hub (https://hub.docker.com)
+Parte 3: Creación de una cuenta en Docker Hub (https://hub.docker.com)
 =================================================================================================
 
 Cree una cuenta de usuario en Docker Hub (https://hub.docker.com)
 
 
-Software instalado y configuración (docker)
+Parte 4: Ejecución de contendores de Docker
 =================================================================================================
 
 Esta instalación de Vagrant usa extensivamente docker para la instalación y uso del software.
