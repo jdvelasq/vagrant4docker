@@ -2,7 +2,7 @@ Instalación y uso de las extensiones de VScode
 =================================================================================================
 
 Paso 1
-  Instale la extensión de desarrollo remote (https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+  Instale la extensión de desarrollo remoto (https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
 
 Paso 2
