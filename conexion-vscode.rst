@@ -84,9 +84,9 @@ Paso 9
     :alt: fig-07
 
 
-.. image:: assets/fig-08.jpg
-    :width: 400
-    :alt: fig-08
+  .. image:: assets/fig-08.jpg
+      :width: 400
+      :alt: fig-08
 
 
 Paso 10
