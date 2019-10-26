@@ -84,6 +84,11 @@ Paso 9
     :alt: fig-07
 
 
+.. image:: assets/fig-08.jpg
+    :width: 400
+    :alt: fig-08
+
+
 Paso 10
   Para conectarse desde VScode a la máquina virtual, haga click en el ícono ubicado al frente del
   nombre de la conexión.
