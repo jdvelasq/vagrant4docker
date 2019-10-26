@@ -88,13 +88,13 @@ Paso 10
   Para conectarse desde VScode a la máquina virtual, haga click en el ícono ubicado al frente del
   nombre de la conexión.
 
-  .. image:: assets/fig-08.jpg
+  .. image:: assets/fig-09.jpg
     :width: 400
-    :alt: fig-08
+    :alt: fig-09
 
  
   En este momento, VScode debe estar conectado a la máquina virtual como si fuera la máquina loca. 
 
-  .. image:: assets/fig-09.jpg
+  .. image:: assets/fig-10.jpg
     :width: 400
-    :alt: fig-09
+    :alt: fig-10
