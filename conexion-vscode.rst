@@ -1,4 +1,4 @@
-Instalación y uso de las extensiones de VScode
+Instalación y uso de las extensiones de VS code
 =================================================================================================
 
 Paso 1
