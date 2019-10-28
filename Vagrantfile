@@ -67,7 +67,11 @@ SHELL
 
     sudo apt-get update 
 
-    sudo apt-get install docker-ce docker-ce-cli containerd.io
+    sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+    sudo groupadd docker
+    sudo usermod -aG docker vagrant
+
 
     # sudo apt-get install -yq \
     #  docker-ce=5:19.03.1~3-0~ubuntu-bionic \
