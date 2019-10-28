@@ -103,3 +103,6 @@ Paso 10
   .. image:: assets/fig-10.jpg
     :width: 400
     :alt: fig-10
+
+Paso 11
+  Instale el complemento de Docker de Microsoft. 
