@@ -4,7 +4,7 @@ Creación y uso de una máquina virtual como entorno de desarrollo
 Este repo contiene las instrucciones y demás archivos requeridos para la creación, configuración
 y uso de una máquina virtual basada en Vagrant que permite la ejecución de contendores de Docker.
 
-* :ref:`parte-1`.
+* :ref:`parte-1-creacion-vm`.
 
 * :ref:`parte-2`.
 
