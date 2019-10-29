@@ -1,4 +1,6 @@
-Instalación y uso de las extensiones de VS code
+.. _parte-3:
+
+Parte 3: Instalación y uso de las extensiones de VS code
 =================================================================================================
 
 Paso 1
