@@ -4,15 +4,15 @@ Creación y uso de una máquina virtual como entorno de desarrollo
 Este repo contiene las instrucciones y demás archivos requeridos para la creación, configuración
 y uso de una máquina virtual basada en Vagrant que permite la ejecución de contendores de Docker.
 
-* [Parte 1. Creación de la máquina virtual ](parte-1-creacion-vm.rst)
+* [Parte 1. Creación de la máquina virtual ](tutorial/parte-1-creacion-vm.rst)
 
-* :ref:`parte-2`.
+* [Parte 2. Encendido y apagado de la máquina virtual](parte-2-encendido-apagado-vm.rst)
 
-* :ref:`parte-3`.
+* [Parte 3. Conexión remote de VS code con la máquina virtual](parte-3-conexion-vscode.rst)
 
-* :ref:`parte-4`.
+* [Parte 4. Descarga de imágenes de Docker](parte-4-descarga-imagenes.rst)
 
-* :ref:`parte-5`.
+* [Parte 5. Ejecución de imágenes de Docker](parte-5-ejecucion-imagenes.rst)
 
 
 Resumen
