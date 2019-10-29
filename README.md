@@ -18,7 +18,7 @@ y uso de una máquina virtual basada en Vagrant que permite la ejecución de con
 Resumen
 =================================================================================================
 
-.. code-block:: bash
+```bash 
 
   ## Encender la VM
   vagrant up
@@ -51,7 +51,7 @@ Resumen
   docker-compose --file yml/pyspark.yml up
   
   docker-compose --file yml/openrefine.yml up
-  
+```  
   
 
 Material complementario
