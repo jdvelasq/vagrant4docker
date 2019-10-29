@@ -9,6 +9,6 @@ services:
       - "9000:9000"
     volumes:
       - type: bind
-        source: "/vagrant"
+        source: "$PWD"
         target: /app
 
