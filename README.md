@@ -6,13 +6,13 @@ y uso de una máquina virtual basada en Vagrant que permite la ejecución de con
 
 * [Parte 1. Creación de la máquina virtual ](tutorial/parte-1-creacion-vm.rst)
 
-* [Parte 2. Encendido y apagado de la máquina virtual](parte-2-encendido-apagado-vm.rst)
+* [Parte 2. Encendido y apagado de la máquina virtual](tutorial/parte-2-encendido-apagado-vm.rst)
 
-* [Parte 3. Conexión remote de VS code con la máquina virtual](parte-3-conexion-vscode.rst)
+* [Parte 3. Conexión remote de VS code con la máquina virtual](tutorial/parte-3-conexion-vscode.rst)
 
-* [Parte 4. Descarga de imágenes de Docker](parte-4-descarga-imagenes.rst)
+* [Parte 4. Descarga de imágenes de Docker](tutorial/parte-4-descarga-imagenes.rst)
 
-* [Parte 5. Ejecución de imágenes de Docker](parte-5-ejecucion-imagenes.rst)
+* [Parte 5. Ejecución de imágenes de Docker](tutorial/parte-5-ejecucion-imagenes.rst)
 
 
 Resumen
