@@ -112,7 +112,7 @@ Entre al Bios de su máquina y haga los cambios necesarios. Busque en Google el 
 
 **2. Windows no permite activar la multitarea (Hyper V)**.
 
-Realice el siguiente procedimiento:
+  Realice el siguiente procedimiento:
 
 
   Paso a)
