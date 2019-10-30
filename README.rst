@@ -8,16 +8,26 @@ y uso de una máquina virtual basada en Vagrant que permite la ejecución de con
 Contenido
 -------------------------------------------------------------------------------------------------
 
-  * Parte 1: Creación de la máquina virtual usando Vagrant.
+* Parte 1: Creación de la máquina virtual usando Vagrant.
 
 
-  * Parte 2: Encendido, apagado y borrado de la máquina virtual.
+* Parte 2: Encendido, apagado y borrado de la máquina virtual.
 
 
-  * Parte 3: Instalación y uso de las extensiones de VS code.
+* Parte 3: Instalación y uso de las extensiones de VS code.
 
 
-  * Parte 4: Descarga de las imágenes desde Docker Hub.
+* Parte 4: Descarga de las imágenes desde Docker Hub.
+
+
+* Parte 5: Ejecución de una imagen
+
+
+* Resumen
+
+
+* Material complementario
+
 
 
 Parte 1: Creación de la máquina virtual usando Vagrant
