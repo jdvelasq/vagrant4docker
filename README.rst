@@ -282,7 +282,7 @@ Paso 4
   En Visual Studio Code (VScode) haga click en el ícono `Remote Explorer`.
 
   .. image:: assets/fig-02.jpg
-    :width: 100px
+    :width: 50px
     :align: center
     :alt: fig-02  
 
