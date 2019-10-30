@@ -396,9 +396,9 @@ Descarga de las imágenes
 
   **Python 3**
   
-    .. code-block::
-  
-      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/python:3.7
+  .. code-block::
+
+    vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/python:3.7
             
   **Apache Pig**
   
@@ -441,8 +441,8 @@ Descarga de las imágenes
 
 
 3. Use las imágenes y continue su trabajo. O finalice su trabajo apagando la máquina virtual. 
-    La ejecución de las imágenes puede realizarse desde VS code o desde el Terminal, tal como 
-    se indica en las siguientes partes de la documentación.
+   La ejecución de las imágenes puede realizarse desde VS code o desde el Terminal, tal como 
+   se indica en las siguientes partes de la documentación.
 
 
 
