@@ -10,6 +10,7 @@ y uso de una máquina virtual basada en Vagrant que permite la ejecución de con
 Contenido
 -------------------------------------------------------------------------------------------------
 
+* Creación de la máquina virtual usando Vagrant
 
 
 Parte 1: Creación de la máquina virtual usando Vagrant
@@ -25,7 +26,7 @@ para la instalación de la máquina virtual.
   
 
 Creación de la máquina virtual
--------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Paso 1
   Descargue e instale `VirtualBox  <https://www.virtualbox.org/wiki/Downloads>`_.
@@ -83,8 +84,8 @@ Paso 6
   Proceda con el encendido de la máquina de acuerdo a su sistema operativo. Las 
   instrucciones detalladas aparecen más adelante en este mismo documento. 
 
-Solución de problemas
-=================================================================================================
+
+**Solución de problemas**
 
 **1. Mi computador reporta que el Bios no permite activar la multitarea.**
 
@@ -108,12 +109,9 @@ Realice el siguiente procedimiento:
 
 
 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-
-
-
-:ref:`contenido` vinculo
 
 
 
