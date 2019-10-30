@@ -515,7 +515,7 @@ Para ejecutar una imagen:
 
 3. Haga click en el boton derecho sobre el tag y seleccione `Run interactive`.  
 
-  .. image:: assets/fig-11.jpg
+  .. image:: assets/fig-11.png
     :alt: fig-11
 
 
