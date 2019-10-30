@@ -289,7 +289,6 @@ Paso 5
   Haga click en  `SSH TARGETS` y luego en el símbolo de `+`. 
   
   .. image:: assets/fig-03.jpg
-    :width: 400
     :alt: fig-03
 
 
@@ -297,7 +296,6 @@ Paso 6
   En el comando de conexión digite `ssh vagrant4docker`. 
   
   .. image:: assets/fig-04.jpg
-    :width: 400
     :alt: fig-04  
 
 
@@ -305,7 +303,6 @@ Paso 7
   El sistema le solicitará que indique cual archivo de configuración desea modificar. Use el suyo por defecto.
       
   .. image:: assets/fig-05.jpg
-    :width: 400
     :alt: fig-05
 
 
