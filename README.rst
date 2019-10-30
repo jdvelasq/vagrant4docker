@@ -5,16 +5,12 @@ Este repo contiene las instrucciones y demás archivos requeridos para la creaci
 y uso de una máquina virtual basada en Vagrant que permite la ejecución de contendores de Docker.
 
 
-.. _contenido:
-
 Contenido
 -------------------------------------------------------------------------------------------------
 
 * Parte 1: Creación de la máquina virtual usando Vagrant.
 
-
 * Parte 2: Encendido, apagado y borrado de la máquina virtual.
-
 
 * Parte 3: Instalación y uso de las extensiones de VS code.
 
@@ -227,6 +223,7 @@ Borrado de la VM
   .. code-block:: bash
 
     vagrant destroy
+
 
 
 Parte 3: Instalación y uso de las extensiones de VS code
