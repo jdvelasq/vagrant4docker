@@ -8,12 +8,16 @@ y uso de una máquina virtual basada en Vagrant que permite la ejecución de con
 Contenido
 -------------------------------------------------------------------------------------------------
 
-* Parte 1: Creación de la máquina virtual usando Vagrant.
+  * Parte 1: Creación de la máquina virtual usando Vagrant.
 
-* Parte 2: Encendido, apagado y borrado de la máquina virtual.
 
-* Parte 3: Instalación y uso de las extensiones de VS code.
+  * Parte 2: Encendido, apagado y borrado de la máquina virtual.
 
+
+  * Parte 3: Instalación y uso de las extensiones de VS code.
+
+
+  * Parte 4: Descarga de las imágenes desde Docker Hub.
 
 
 Parte 1: Creación de la máquina virtual usando Vagrant
@@ -266,7 +270,7 @@ Paso 3
 Paso 4
   En Visual Studio Code (VScode) haga click en el ícono `Remote Explorer`.
 
-  .. image:: ../assets/fig-02.jpg
+  .. image:: assets/fig-02.jpg
     :width: 400
     :alt: fig-02  
 
@@ -274,7 +278,7 @@ Paso 4
 Paso 5
   Haga click en  `SSH TARGETS` y luego en el símbolo de `+`. 
   
-  .. image:: ../assets/fig-03.jpg
+  .. image:: assets/fig-03.jpg
     :width: 400
     :alt: fig-03
 
@@ -282,7 +286,7 @@ Paso 5
 Paso 6
   En el comando de conexión digite `ssh vagrant4docker`. 
   
-  .. image:: ../assets/fig-04.jpg
+  .. image:: assets/fig-04.jpg
     :width: 400
     :alt: fig-04  
 
@@ -290,7 +294,7 @@ Paso 6
 Paso 7
   El sistema le solicitará que indique cual archivo de configuración desea modificar. Use el suyo por defecto.
       
-  .. image:: ../assets/fig-05.jpg
+  .. image:: assets/fig-05.jpg
     :width: 400
     :alt: fig-05
 
@@ -299,7 +303,7 @@ Paso 8
   Haga click en el ícono de configuración (el piñon) y luego seleccine nuevamente su archivo de  
   configuración. Se abrirá un editor de texto con la información de la configuración.
 
-  .. image:: ../assets/fig-06.jpg
+  .. image:: assets/fig-06.jpg
     :width: 400
     :alt: fig-06
 
@@ -307,12 +311,12 @@ Paso 8
 Paso 9
   Edite la configuración, pegando la salida del comando `vagrant ssh-config`. Guarde el archivo.
 
-  .. image:: ../assets/fig-07.jpg
+  .. image:: assets/fig-07.jpg
     :width: 400
     :alt: fig-07
 
 
-  .. image:: ../assets/fig-08.jpg
+  .. image:: assets/fig-08.jpg
       :width: 400
       :alt: fig-08
 
@@ -321,14 +325,14 @@ Paso 10
   Para conectarse desde VScode a la máquina virtual, haga click en el ícono ubicado al frente del
   nombre de la conexión.
 
-  .. image:: ../assets/fig-09.jpg
+  .. image:: assets/fig-09.jpg
     :width: 400
     :alt: fig-09
 
  
   En este momento, VScode debe estar conectado a la máquina virtual como si fuera la máquina loca. 
 
-  .. image:: ../assets/fig-10.jpg
+  .. image:: assets/fig-10.jpg
     :width: 400
     :alt: fig-10
 
@@ -336,6 +340,102 @@ Paso 11
   Instale el complemento de Docker de Microsoft. 
 
 
+
+Parte 4: Descarga de las imágenes desde Docker Hub.
+-------------------------------------------------------------------------------------------------
+
+Antes de ejecutar una imágen es preferible realizar su descarga a la máquina virtual. Para ello:
+
+1.  Cree una cuenta de usuario en Docker Hub (https://hub.docker.com)
+
+2.  Descargue una o más imágenes de Docker, tal como se indica a continuación.
+
+  Encendido de la máquina virtual
+    Abra el Terminal y vaya hasta la carpeta donde clono este repositorio. Ejecute
+
+    .. code-block:: bash
+
+      vagrant up 
+
+
+  Apertura de una sesión
+    Después de encender la VM,  conéctese a ella con
+
+    .. code-block:: bash
+
+      vagrant ssh
+
+  Acceso a la carpeta compartida
+    Para ir a la carpeta compartida entre la VM y su sistema
+    operativo, ejecute
+
+    .. code-block:: bash
+
+      cd /vagrant
+  
+    En esta carpeta ejecuta la instrucción correspondiente para iniciar alguna de las 
+    aplicaciones listadas a continnuación.
+  
+  
+  Login en Docker Hub
+    Acceda a Docker Hub desde la consola con el siguiente comando:
+  
+    .. code-block:: bash
+
+      docker login
+  
+  Descarga de las imágenes
+    Descarge las imágenes que requiera usando el comando indicado.
+  
+    **Python 3**
+    
+      .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/python:3.7
+              
+    **Apache Pig**
+    
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/pig:0.18.0
+
+    **Apache Mahout**
+    
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/mahout:0.14.0
+
+    **Apache Hive**
+    
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/hive:2.3.5
+    
+    
+    **Apache Spark**
+    
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/spark:2.4.3
+    
+    
+    **Open Refine**
+    
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/openrefine:3.2
+
+    **Apache Superset**
+    
+    
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/superset:0.34.0
+
+
+  3. Use las imágenes y continue su trabajo. O finalice su trabajo apagando la máquina virtual. 
+     La ejecución de las imágenes puede realizarse desde VS code o desde el Terminal, tal como 
+     se indica en las siguientes partes de la documentación.
 
 
 
@@ -394,7 +494,8 @@ Resumen
   docker-compose --file yml/pyspark.yml up
   
   docker-compose --file yml/openrefine.yml up
-```  
+```
+
   
 
 Material complementario
