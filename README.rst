@@ -394,19 +394,19 @@ Login en Docker Hub
 Descarga de las imágenes
   Descarge las imágenes que requiera usando el comando indicado.
 
-  **Python 3**
+  * Python 3
   
-  .. code-block::
+    .. code-block::
 
-    vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/python:3.7
+      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/python:3.7
             
-  **Apache Pig**
+  * Apache Pig
   
-  .. code-block::
-  
-      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/pig:0.18.0
+    .. code-block::
 
-  **Apache Mahout**
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/pig:0.18.0
+
+  * Apache Mahout
   
   .. code-block::
   
