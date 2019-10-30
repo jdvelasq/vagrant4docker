@@ -102,7 +102,8 @@ Paso 6
   instrucciones detalladas aparecen más adelante en este mismo documento. 
 
 
-**Solución de problemas**
+Solución de problemas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **1. Mi computador reporta que el Bios no permite activar la multitarea.**
 
@@ -114,15 +115,15 @@ Entre al Bios de su máquina y haga los cambios necesarios. Busque en Google el 
 Realice el siguiente procedimiento:
 
 
-    Paso a)
-      Digite la tecla de windows + x. Luego escoja la opción **Aplicaciones y características**.
+  Paso a)
+    Digite la tecla de windows + x. Luego escoja la opción **Aplicaciones y características**.
 
-    Paso b)
-      En el costado superior derecho, escoja la opción **Programas y características**. Se abrirá una nueva ventana emergente.
+  Paso b)
+    En el costado superior derecho, escoja la opción **Programas y características**. Se abrirá una nueva ventana emergente.
 
-    Paso c)
-      Haga click en la opción **Activar o Desactivar las características de Windows** ubicada en la 
-      parte superior izquierda, busque en la lista la aplicación **Hyper V** y desmárquela.
+  Paso c)
+    Haga click en la opción **Activar o Desactivar las características de Windows** ubicada en la 
+    parte superior izquierda, busque en la lista la aplicación **Hyper V** y desmárquela.
 
 
 
