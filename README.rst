@@ -408,36 +408,35 @@ Descarga de las imágenes
 
   * Apache Mahout
   
-  .. code-block::
-  
-      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/mahout:0.14.0
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/mahout:0.14.0
 
-  **Apache Hive**
+  * Apache Hive
   
-  .. code-block::
-  
-      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/hive:2.3.5
-  
-  
-  **Apache Spark**
-  
-  .. code-block::
-  
-      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/spark:2.4.3
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/hive:2.3.5
   
   
-  **Open Refine**
+  * Apache Spark
   
-  .. code-block::
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/spark:2.4.3
+    
   
-      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/openrefine:3.2
+  * Open Refine
+  
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/openrefine:3.2
 
-  **Apache Superset**
+  * Apache Superset
   
-  
-  .. code-block::
-  
-      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/superset:0.34.0
+    .. code-block::
+    
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/superset:0.34.0
 
 
 3. Use las imágenes y continue su trabajo. O finalice su trabajo apagando la máquina virtual. 
@@ -516,8 +515,7 @@ Para ejecutar una imagen:
 
 3. Haga click en el boton derecho sobre el tag y seleccione `Run interactive`.  
 
-  .. image:: ../assets/fig-11.jpg
-    :width: 400
+  .. image:: assets/fig-11.jpg
     :alt: fig-11
 
 
@@ -525,45 +523,42 @@ Para ejecutar una imagen:
 
 
 
-
-
-
 Resumen
-=================================================================================================
+-------------------------------------------------------------------------------------------------
 
-  .. code-block:: bash
+.. code-block:: bash
 
-    ## Encender la VM
-    vagrant up
+  ## Encender la VM
+  vagrant up
 
-    ## Apagar la VM
-    vagrant halt
+  ## Apagar la VM
+  vagrant halt
 
-    ## Borrar la VM
-    vagrant destroy
+  ## Borrar la VM
+  vagrant destroy
 
-    ## Abrir una sesión en la VM
-    vagrant ssh
+  ## Abrir una sesión en la VM
+  vagrant ssh
 
-    ## Cerrar la sesión en la VM
-    exit
+  ## Cerrar la sesión en la VM
+  exit
 
 
-    ## Ejecución de programas desde el Terminal
-    
-    docker-compose --file yml/jupyterlab.yml up
-    
-    docker-compose --file yml/pig.yml up
-    
-    docker-compose --file yml/mahout.yml up
-    
-    docker-compose --file yml/hive.yml up
-    
-    docker-compose --file yml/superset.yml up
-    
-    docker-compose --file yml/pyspark.yml up
-    
-    docker-compose --file yml/openrefine.yml up
+  ## Ejecución de programas desde el Terminal
+  
+  docker-compose --file yml/jupyterlab.yml up
+  
+  docker-compose --file yml/pig.yml up
+  
+  docker-compose --file yml/mahout.yml up
+  
+  docker-compose --file yml/hive.yml up
+  
+  docker-compose --file yml/superset.yml up
+  
+  docker-compose --file yml/pyspark.yml up
+  
+  docker-compose --file yml/openrefine.yml up
 
 
   
