@@ -437,6 +437,78 @@ Antes de ejecutar una imágen es preferible realizar su descarga a la máquina v
      La ejecución de las imágenes puede realizarse desde VS code o desde el Terminal, tal como 
      se indica en las siguientes partes de la documentación.
 
+Parte 5: Ejecución de una imagen
+-------------------------------------------------------------------------------------------------
+
+Las imágenes pueden ser ejecutadas directamente desd el Terminal o desde VS code.
+
+
+Ejecución de una imagen desde el Terminal usando docker-compose
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`docker-compose` puede ser usado para ejecutar una imágen como un servicio de acuerdo con los 
+parámetros predefinidos en un archivo de configuración
+
+Encendido de la máquina virtual
+  Abra el Terminal y vaya hasta la carpeta donde clono este repositorio. Ejecute
+
+  .. code-block:: bash
+
+    vagrant up 
+
+
+Apertura de una sesión
+  Después de encender la VM,  conéctese a ella con
+
+  .. code-block:: bash
+
+    vagrant ssh
+
+Acceso a la carpeta compartida
+  Para ir a la carpeta compartida entre la VM y su sistema
+  operativo, ejecute
+
+  .. code-block:: bash
+
+    cd /vagrant
+  
+  En esta carpeta ejecuta la instrucción correspondiente para iniciar alguna de las 
+  aplicaciones listadas a continnuación.
+
+Ejecución de la imagen
+  Ejecute el imagen con:
+
+  .. code-block:: bash
+
+    docker-compose --file yml/NOMBRE.yml up
+
+  donde `NOMBRE` es el nombre del archivo. Por ejemplo, para ejecutar Apache Pig use:
+
+  .. code-block:: bash
+
+    docker-compose --file yml/pig.yml up
+
+
+Ejecución de una imagen usando VS code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Una vez haya conectado VS code de forma remota a la máquina virtual y haya instalado el 
+complemento de Docker, usted podrá visualizar las imágenes descargadas la máquina virtual.
+
+
+Para ejecutar una imagen:
+
+
+1. Haga click en el ícono de Docker en la barra vertical de la parte derecha de VS code.
+
+2. Haga click en el menu `IMAGES` y luego en la imagen correspondiente para ver los tags 
+   disponibles.
+
+3. Haga click en el boton derecho sobre el tag y seleccione `Run interactive`.  
+
+  .. image:: ../assets/fig-11.jpg
+    :width: 400
+    :alt: fig-11
 
 
 
@@ -444,62 +516,50 @@ Antes de ejecutar una imágen es preferible realizar su descarga a la máquina v
 
 
 
-
-
-
-* [Parte 1. Creación de la máquina virtual ](tutorial/parte-1-creacion-vm.rst)
-
-* [Parte 2. Encendido y apagado de la máquina virtual](tutorial/parte-2-encendido-apagado-vm.rst)
-
-* [Parte 3. Conexión remote de VS code con la máquina virtual](tutorial/parte-3-conexion-vscode.rst)
-
-* [Parte 4. Descarga de imágenes de Docker](tutorial/parte-4-descarga-imagenes.rst)
-
-* [Parte 5. Ejecución de imágenes de Docker](tutorial/parte-5-ejecucion-imagenes.rst)
 
 
 Resumen
 =================================================================================================
 
-```bash 
+  .. code-block:: bash
 
-  ## Encender la VM
-  vagrant up
+    ## Encender la VM
+    vagrant up
 
-  ## Apagar la VM
-  vagrant halt
+    ## Apagar la VM
+    vagrant halt
 
-  ## Borrar la VM
-  vagrant destroy
+    ## Borrar la VM
+    vagrant destroy
 
-  ## Abrir una sesión en la VM
-  vagrant ssh
+    ## Abrir una sesión en la VM
+    vagrant ssh
 
-  ## Cerrar la sesión en la VM
-  exit
+    ## Cerrar la sesión en la VM
+    exit
 
 
-  ## Ejecución de programas desde el Terminal
-  
-  docker-compose --file yml/jupyterlab.yml up
-  
-  docker-compose --file yml/pig.yml up
-  
-  docker-compose --file yml/mahout.yml up
-  
-  docker-compose --file yml/hive.yml up
-  
-  docker-compose --file yml/superset.yml up
-  
-  docker-compose --file yml/pyspark.yml up
-  
-  docker-compose --file yml/openrefine.yml up
-```
+    ## Ejecución de programas desde el Terminal
+    
+    docker-compose --file yml/jupyterlab.yml up
+    
+    docker-compose --file yml/pig.yml up
+    
+    docker-compose --file yml/mahout.yml up
+    
+    docker-compose --file yml/hive.yml up
+    
+    docker-compose --file yml/superset.yml up
+    
+    docker-compose --file yml/pyspark.yml up
+    
+    docker-compose --file yml/openrefine.yml up
+
 
   
 
 Material complementario
-========================================
+-------------------------------------------------------------------------------------------------
 
 * `What is Vagrant? <https://www.vagrantup.com/intro/index.html>`_
 
