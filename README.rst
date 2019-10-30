@@ -357,92 +357,95 @@ Antes de ejecutar una imágen es preferible realizar su descarga a la máquina v
 
 2.  Descargue una o más imágenes de Docker, tal como se indica a continuación.
 
-  Encendido de la máquina virtual
-    Abra el Terminal y vaya hasta la carpeta donde clono este repositorio. Ejecute
+Encendido de la máquina virtual
+  Abra el Terminal y vaya hasta la carpeta donde clono este repositorio. Ejecute
 
-    .. code-block:: bash
+  .. code-block:: bash
 
-      vagrant up 
+    vagrant up 
 
 
-  Apertura de una sesión
-    Después de encender la VM,  conéctese a ella con
+Apertura de una sesión
+  Después de encender la VM,  conéctese a ella con
 
-    .. code-block:: bash
+  .. code-block:: bash
 
-      vagrant ssh
+    vagrant ssh
 
-  Acceso a la carpeta compartida
-    Para ir a la carpeta compartida entre la VM y su sistema
-    operativo, ejecute
+Acceso a la carpeta compartida
+  Para ir a la carpeta compartida entre la VM y su sistema
+  operativo, ejecute
 
-    .. code-block:: bash
+  .. code-block:: bash
 
-      cd /vagrant
+    cd /vagrant
+
+  En esta carpeta ejecuta la instrucción correspondiente para iniciar alguna de las 
+  aplicaciones listadas a continnuación.
+
+
+Login en Docker Hub
+  Acceda a Docker Hub desde la consola con el siguiente comando:
+
+  .. code-block:: bash
+
+    docker login
+
+Descarga de las imágenes
+  Descarge las imágenes que requiera usando el comando indicado.
+
+  **Python 3**
   
-    En esta carpeta ejecuta la instrucción correspondiente para iniciar alguna de las 
-    aplicaciones listadas a continnuación.
+    .. code-block::
+  
+      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/python:3.7
+            
+  **Apache Pig**
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/pig:0.18.0
+
+  **Apache Mahout**
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/mahout:0.14.0
+
+  **Apache Hive**
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/hive:2.3.5
   
   
-  Login en Docker Hub
-    Acceda a Docker Hub desde la consola con el siguiente comando:
+  **Apache Spark**
   
-    .. code-block:: bash
-
-      docker login
+  .. code-block::
   
-  Descarga de las imágenes
-    Descarge las imágenes que requiera usando el comando indicado.
+      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/spark:2.4.3
   
-    **Python 3**
-    
-      .. code-block::
-    
-        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/python:3.7
-              
-    **Apache Pig**
-    
-    .. code-block::
-    
-        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/pig:0.18.0
+  
+  **Open Refine**
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/openrefine:3.2
 
-    **Apache Mahout**
-    
-    .. code-block::
-    
-        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/mahout:0.14.0
-
-    **Apache Hive**
-    
-    .. code-block::
-    
-        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/hive:2.3.5
-    
-    
-    **Apache Spark**
-    
-    .. code-block::
-    
-        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/spark:2.4.3
-    
-    
-    **Open Refine**
-    
-    .. code-block::
-    
-        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/openrefine:3.2
-
-    **Apache Superset**
-    
-    
-    .. code-block::
-    
-        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/superset:0.34.0
+  **Apache Superset**
+  
+  
+  .. code-block::
+  
+      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/superset:0.34.0
 
 
-  3. Use las imágenes y continue su trabajo. O finalice su trabajo apagando la máquina virtual. 
-     La ejecución de las imágenes puede realizarse desde VS code o desde el Terminal, tal como 
-     se indica en las siguientes partes de la documentación.
+3. Use las imágenes y continue su trabajo. O finalice su trabajo apagando la máquina virtual. 
+    La ejecución de las imágenes puede realizarse desde VS code o desde el Terminal, tal como 
+    se indica en las siguientes partes de la documentación.
+
+
+
 
 Parte 5: Ejecución de una imagen
 -------------------------------------------------------------------------------------------------
