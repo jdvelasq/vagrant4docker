@@ -7,6 +7,8 @@ Vagrant.configure("2") do |config|
   ##
   ##    vagrant plugin install vagrant-disksize
   ##
+
+
   config.disksize.size = '15GB'
 
   config.vm.provider "virtualbox" do |v|
@@ -32,9 +34,9 @@ SHELL
   ##
   ##
   config.vm.provision "shell", inline: <<-SHELL
-    apt update && \
-    apt install -y puppet && \
-    rm -rf /var/lib/apt/lists/*
+    apt update \
+    && apt install -y puppet \
+    && rm -rf /var/lib/apt/lists/*
 
 SHELL
 
