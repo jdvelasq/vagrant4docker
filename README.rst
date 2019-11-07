@@ -394,17 +394,31 @@ Login en Docker Hub
 Descarga de las imágenes
   Descarge las imágenes que requiera usando el comando indicado.
 
+  **Curso de Analítica de Grandes Datos**
+  
+  A hoy, 2019-11-07, solo deben descargar las imágenes de Hadoop y Pig tal como se indica a continuación.
+
+
+  * Apache Hadoop:
+  
+    .. code-block::
+
+      vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/hadoop:2.8.5
+  
+  * Apache Pig
+  
+    .. code-block::
+
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/pig:0.18.0
+
+  **Imágenes en revisión**
+
   * Python 3
   
     .. code-block::
 
       vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/python:3.7
             
-  * Apache Pig
-  
-    .. code-block::
-
-        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/pig:0.18.0
 
   * Apache Mahout
   
@@ -446,13 +460,13 @@ Descarga de las imágenes
 
 
 
-Parte 5: Ejecución de una imagen
+Parte 5: Ejecución de una imagen (deprecated) 
 -------------------------------------------------------------------------------------------------
 
 Las imágenes pueden ser ejecutadas directamente desd el Terminal o desde VS code.
 
 
-Ejecución de una imagen desde el Terminal usando docker-compose
+Ejecución de una imagen desde el Terminal usando docker-compose (deprecated)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `docker-compose` puede ser usado para ejecutar una imágen como un servicio de acuerdo con los 
@@ -544,7 +558,7 @@ Resumen
   exit
 
 
-  ## Ejecución de programas desde el Terminal
+  ## Ejecución de programas desde el Terminal (deprecated)
   
   docker-compose --file yml/jupyterlab.yml up
   
