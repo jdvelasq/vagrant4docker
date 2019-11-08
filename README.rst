@@ -409,7 +409,7 @@ Descarga de las imágenes
   
     .. code-block::
 
-        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/pig:0.18.0
+        vagrant@ubuntu-bionic:/vagrant$ docker pull jdvelasq/pig:0.17.0
 
   **Imágenes en revisión**
 
